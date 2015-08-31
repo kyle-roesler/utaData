@@ -1,0 +1,14 @@
+Title               National Composite Home Price Index for the United States
+Series ID           USCSCOMHPISA
+Source              Standard and Poor's
+Release             S&PCase-Shiller Home Price Indices
+Seasonal Adjustment Seasonally Adjusted
+Frequency           Quarterly
+Units               Index 2000 Q1 = 100
+Date Range          1987-01-01 to 2011-10-01
+Last Updated        2012-02-28 201 PM CST
+Notes               For more information regarding the index, please visit,
+                     httpwww.standardandpoors.comindicessp-case-shiller-home-price-indicesenusindexId=spusa-cashpidff--p-us----.
+                     There is more information about home price sales pairs in the
+                     Methodology section. Copyright, 2011, Standard & Poor's Financial
+                     Services LLC. Reprinted with permission.

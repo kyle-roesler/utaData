@@ -1,0 +1,17 @@
+{
+    "contents" : "# Compute Team Offensive Statistics.r\n\nrequire( Lahman )                                   # Obtain Lahman database package\ndata( Teams )                                       # Make Teams avaible for analysis\nhead( Teams )                                       # Show first 6 rows\ntail( Teams )                                       # and last 6 rows\n\n\nTeams <- Teams[ Teams$yearID > 1999, ]              # Only use temas since 2000\nhead( Teams )                                       # Confirm row deletion   \ntail( Teams )                            \n\nTeams$batAvg <- with( Teams, ( H / AB ))            # Compute batting average\nTeams$OBP    <- with( Teams,                        # Compute onbase percentage\n                  ( H + BB +HBP  ) /     \n                  ( AB + BB + HBP + SF ))\nTeams$SLG    <- with( Teams,                        # Compute slugging percentage\n                      ( H+X2B+2*X3B +3*HR)/ AB )\nTeams$OBSP  <- with( Teams, OBP+SLG )              # Compute onbase percentage plus slugging percentage\nTeams$OBST  <- with( Teams, OBP*SLG )  \n\nSabermetrics <- with( Teams, data.frame( \n                      yearID, \n                      teamID, \n                      W, \n                      L,  \n                      batAvg, \n                      OBP,\n                      SLG, \n                      OBSP,\n                      OBST,\n                      R ))\nsave( Sabermetrics, file=\"Sabermetrics.rda\" )\n\nrequire( GGally )\nggpairs( Sabermetrics[5:10] )\n",
+    "created" : 1412900495755.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2413424851",
+    "id" : "3DC5C086",
+    "lastKnownWriteTime" : 1412903473,
+    "path" : "~/Data/Sabermetrics/Team Offensive Perfomance/Compute Team Offensive Statistics.r",
+    "project_path" : "Compute Team Offensive Statistics.r",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

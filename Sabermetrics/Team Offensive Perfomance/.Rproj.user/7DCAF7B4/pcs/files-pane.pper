@@ -1,0 +1,9 @@
+{
+    "path" : "~/Data/Sabermetrics/Team Offensive Perfomance",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
